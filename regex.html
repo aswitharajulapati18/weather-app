@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validate()" action="https://www.google.com">
+        <p>
+            <input type="text" placeholder="Enter Name" name="name" id="name" />
+        </p>
+        <p>
+            <input type="text" placeholder="enter EmailId" name="email" id="email">
+        </p>
+        <p>
+            <input type="text" placeholder="enter password" name="password" id="password">
+        </p>
+        <p>
+            <select name="city" id="city">
+                <option value="">select ur city</option>
+                <option value="vja">vja</option>
+                <option value="hyd">hyd</option>
+                <option value="gnt">gnt</option>
+            </select>
+        </p>
+        <button>Submit</button>
+    </form>
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value
+            var nameCheck = /^[a-zA-Z]+(?:[a-zA-Z\s]+)*$/
+            var email = document.getElementById("email").value
+            var emailCheck=/^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-z]{2,3}$/
+            // alert(email)
+            //var emailChecker = /^[a-zA-Z0-9.]+@[a-zA-Z]+\.[a-z]{2,3}$/
+            var password=document.getElementById("password").value
+            var passwordCheck=/^(?=.[0-9])(?=.[a-z])(?=.[A-Z])(?=.\W).{6,}$/
+            var city=document.getElementById("city").value
+            console.log("city value is",city)
+            if (name == "" || name.length < 3) {
+                alert("Fill all the required fields before u submit")
+                return false
+            }
+            if (!name.match(nameCheck)) {
+                alert("Name should have only alphabits")
+                return false
+            }
+            
+            if (!email.match(emailCheck)) {
+                alert("Check ur mailid")
+                return false
+            }
+            
+            if(password==""){
+                alert("Password should not be empty")
+                return false
+            }
+            if(!password.match(passwordCheck)){
+                alert("Password must carry upper,lowe,dig....")
+                return false
+            }
+            if(city=="")
+            {
+                alert("select ur city")
+                return false
+            }
+            return true
+        }
+    </script>
+</body>
+</html>

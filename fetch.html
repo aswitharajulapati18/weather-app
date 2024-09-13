@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://reqres.in/api/users?page=2")
+        //then handles the response which returned by fetch
+               .then((res)=>{
+                //displaying the response which we cant understand
+                  console.log(res)
+                  //converting the response into json and returning
+                  return res.json()
+               })
+               //getting the converted response
+               .then((jsonRes)=>{
+                //displaying the json response
+                //console.log(jsonRes.data)
+                displayStudents(jsonRes.data)
+               })
+               function displayStudents(students){
+                   console.log(students)
+                   for(let i=0;i<students.length;i++){
+                      document.getElementById("show-students")
+                      innerHTML+=`
+                      <div>
+                        <p>Name:${students[i]}
+
+                   }
+               }
+    </script>
+</body>
+</html>

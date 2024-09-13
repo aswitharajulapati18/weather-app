@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Generate password:<span id="showPassword"></span></p>
+    <button onclick="generatePassword()">Generate</button>
+    <script>
+        function generatePassword(){
+        var passwordList="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTTUVWXYZ0123456789@!#$&*",password=[]
+        for(var i=1;i<=6;i++){
+            var randomNumber=Math.floor(Math.random()*passwordList.length)
+            password.push(passwordList.charAt(randomNumber))
+            //console.log(randomNumber,passwordList.chartAt(randomNumber))
+        }
+        password=password.join('')
+        console.log(password)
+        document.getElementById("showPassword").innerHTML=password
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const promiseObj=new Promise(function(resolve,reject){
+        let time=Math.random()
+        console.log(time)
+        if(time<0.5){
+            return resolve()
+        }
+        else{
+            return reject()
+        }
+     })
+     console.log(promiseObj)
+        //setTimeout(function(){
+           // console.log("flipkart")
+       // },2000)
+       // console.log("amazon")
+       // console.log("mytra")
+        
+    </script>
+</body>
+</html>

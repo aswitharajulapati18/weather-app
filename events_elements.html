@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- <input type="text" placeholder="Enter your name"id="username">
+    <button onclick="greet()">hit me</button> -->
+   <p><input placeholder="Enter a name" id="firstname"/></p>
+   <p><input type="password" id="password" placeholder="password">
+      <input type="button" value="show" onclick="hanclepassword()">
+</p>
+   
+    <p><button onclick="handleSubmit()">Submit</button></p>
+    <script>
+        function showPassword(){
+            var password =document.getElementById("password")
+            if(passwor.type=="password"){
+                password.setAttribute("type","text")
+                document.getElementById("btn-visibility").value="hide"
+            }
+            else if(password.type=="text")
+            password.setAttribute("type","text")
+                document.getElementById("btn-visibility").value="show"
+ 
+        }
+        //function greet(){
+            //alert("good morning aswitha")
+           // var userName=document.getElementById("username").value
+           // console.log(userName)
+       // }
+       function handleSubmit(){
+       var firstName=document.getElementById("firstname").value
+       var password=document.getElementById("password").value
+       console.log(firstName)
+       console.log(password)
+       }
+    </script>
+</body>
+</html>
